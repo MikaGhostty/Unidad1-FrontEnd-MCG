@@ -1,29 +1,29 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <title>UN TITULO CUALQUIERA</title>
+  <meta charset="UTF-8">
+  <title>Login Club Deportivo</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header>
-        <h1>Club Deportivo proc</h1>
-        <nav>
-            <a href="#">Inicio</a>
-            <a href="#">Planes</a>
-            <a href="#">Reservas</a>
-        </nav>
-    </header>
+  <div class="login-box" id="loginBox">
+    <h2>Login Club Deportivo</h2>
+    <input type="text" id="user" placeholder="Usuario">
+    <input type="password" id="pass" placeholder="Contraseña">
+    <button onclick="login()">Ingresar</button>
+  </div>
 
-    <main>
-        <section>
-            <h2>Bienvenido a nuestro club</h2>
-            <p>Entrena con los mejores profesionales</p>
-        </section>
-    </main>
+  <div class="sidebar" id="sidebar">
+    <a href="#">Partidos</a>
+    <a href="#">Socios</a>
+    <a href="#">Entrenamientos</a>
+    <a href="#">Equipos</a>
+    <a href="#">Salir</a>
+  </div>
 
-    <footer>
-        <p>2026 Club Deportivo</p>
-    </footer>
+  <div class="toggle-btn" id="toggleBtn" onclick="toggleMenu()">☰ Menú</div>
+
+  <script src="script.js"></script>
 </body>
 </html>
