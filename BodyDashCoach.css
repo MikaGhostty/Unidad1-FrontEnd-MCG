@@ -66,6 +66,18 @@ h1 {
   gap: 2rem;
 }
 
+@media (max-width: 992px) {
+  .dashboard-grid {
+    grid-template-columns: 1fr 1fr; /* dos columnas en tablets */
+  }
+}
+
+@media (max-width: 600px) {
+  .dashboard-grid {
+    grid-template-columns: 1fr; /* una columna en móviles */
+  }
+}
+
 /* Cards */
 .card {
   background: #fff;
@@ -86,11 +98,13 @@ h1 {
 }
 
 .alumnos li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   margin: 0.5rem 0;
 }
 
 .alumnos button {
-  margin-left: 10px;
   background-color: #28a745;
   color: #fff;
   border: none;
@@ -103,15 +117,29 @@ h1 {
   background-color: #218838;
 }
 
+/* Horario */
+.horario {
+  overflow-x: auto; /* scroll horizontal en pantallas pequeñas */
+}
+
 .horario table {
   width: 100%;
   border-collapse: collapse;
+  min-width: 400px; /* evita compresión excesiva */
 }
 
 .horario th, .horario td {
   border: 1px solid #ccc;
   padding: 0.5rem;
   text-align: center;
+}
+
+/* Reportes */
+.reportes p {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0.5rem 0;
 }
 
 .reportes button {
