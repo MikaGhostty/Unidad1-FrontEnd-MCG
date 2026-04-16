@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Dashboard Admin - SportClub</title>
+  <link rel="stylesheet" href="BodyDashAdmin.css">
+</head>
+<body>
+  <header class="header-admin">
+    <img src="SportClubLogo.png" alt="Logo SportClub" class="logo">
+    <nav class="nav-admin">
+      <a href="#">Inicio</a>
+      <a href="#">Usuarios</a>
+      <a href="#">Estadísticas</a>
+      <a href="#">Configuración</a>
+      <button class="btn-edit">Editar Perfil</button>
+      <a href="login1.html" class="btn-logout">Cerrar Sesión</a>
+    </nav>
+  </header>
+
+  <main class="main-admin">
+    <h1>Panel de Administración</h1>
+
+    <div class="dashboard-grid">
+      <!-- Gestión de Usuarios -->
+      <section class="card usuarios">
+        <h2>Gestión de Usuarios</h2>
+        <input type="text" placeholder="Buscar...">
+        <ul>
+          <li>Nombre: Elton tito – Email: EltonTito@sportclub.com – Rol: Usuario <button>Editar</button></li>
+          <li>Nombre: Josepi torrio – Email: Josepitoelmascapito@sportclub.com – Rol: Coach <button>Editar</button></li>
+          <li>Nombre: Leonor Gasmo – Email: LeonorGasmo@sportclub.com – Rol: Admin <button>Editar</button></li>
+        </ul>
+      </section>
+
+      <!-- Estadísticas -->
+      <section class="card estadisticas">
+        <h2>Estadísticas del Sistema</h2>
+        <table>
+          <tr>
+            <th>Total Usuarios</th>
+            <th>Total Clases</th>
+            <th>Usuarios Activos</th>
+          </tr>
+          <tr>
+            <td>270</td>
+            <td>35</td>
+            <td>85</td>
+          </tr>
+        </table>
+      </section>
+
+      <!-- Reportes -->
+      <section class="card reportes">
+        <h2>Reportes Generales</h2>
+        <p>Informe Mensual <button>Descargar</button></p>
+        <p>Abril <button>Descargar</button></p>
+        <button>Configurar...</button>
+      </section>
+    </div>
+  </main>
+</body>
+</html>

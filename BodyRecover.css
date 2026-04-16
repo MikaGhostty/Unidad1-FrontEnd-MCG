@@ -1,5 +1,5 @@
 body {
-  background-color: #324132;   /* fondo verde oscuro */
+  background-color: #324132;
   font-family: Arial, sans-serif;
   margin: 0;
   display: flex;
@@ -8,45 +8,45 @@ body {
   height: 100vh;
 }
 
-.login-container {
+.recover-container {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.login-card {
-  background: #9461a8;         /* card morada */
+.recover-card {
+  background: #9461a8;       /* color de la card */
   padding: 2rem;
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   width: 300px;
 }
 
-.logo {
-  display: block;
-  margin: 0 auto 1rem auto;
-  width: 250px;
+.titulo {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #fcfcfc;            /*fondo morado */
 }
 
 form label {
   display: block;
   margin-bottom: 0.5rem;
   font-weight: bold;
-  color: #e9e9e9;              /* etiquetas claras sobre fondo morado */
+  color: #fcfcfc;
 }
 
 form input {
   width: 100%;
   padding: 0.5rem;
   margin-bottom: 1rem;
-  border: 1px solid #666363;
+  border: 1px solid #cccccc;
   border-radius: 4px;
 }
 
 button {
   width: 100%;
   padding: 0.75rem;
-  background-color: #218838;   /* verde botón */
+  background-color: #218838;
   color: white;
   border: none;
   border-radius: 4px;
@@ -54,21 +54,21 @@ button {
 }
 
 button:hover {
-  background-color: #4f1874;   /* hover morado */
+  background-color: #4f1874;
 }
 
-.links {
+nav.links {
   margin-top: 1rem;
   text-align: center;
 }
 
-.links a {
+nav.links a {
   display: block;
   margin: 0.25rem 0;
-  color: #ffffff;              /* enlaces blancos */
+  color: #fcfcfc;
   text-decoration: none;
 }
 
-.links a:hover {
+nav.links a:hover {
   text-decoration: underline;
 }

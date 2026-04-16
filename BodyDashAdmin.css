@@ -1,0 +1,136 @@
+body {
+  background-color: #f9f0f0;
+  font-family: Arial, sans-serif;
+  margin: 0;
+}
+
+/* Header */
+.header-admin {
+  background-color: #8B0000; /* rojo/morado */
+  color: #fff;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  height: 50px;
+}
+
+.nav-admin a {
+  color: #fff;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+.nav-admin a:hover {
+  text-decoration: underline;
+}
+
+.btn-edit, .btn-logout {
+  margin-left: 10px;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.btn-edit {
+  background-color: #F2B705; /* dorado */
+  color: #2E1A47;
+  border: none;
+}
+
+.btn-logout {
+  background-color: #2E1A47; /* morado oscuro */
+  color: #fff;
+  border: none;
+}
+
+/* Main */
+.main-admin {
+  padding: 2rem;
+}
+
+h1 {
+  text-align: center;
+  color: #8B0000;
+  margin-bottom: 2rem;
+}
+
+/* Grid */
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr; /* tabla tres columnas */
+  gap: 2rem;
+}
+
+/* Cards */
+.card {
+  background: #fff;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.card h2 {
+  color: #8B0000;
+  margin-bottom: 1rem;
+}
+
+/* Gestión de usuarios */
+.usuarios input {
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.usuarios ul {
+  list-style: none;
+  padding: 0;
+}
+
+.usuarios li {
+  margin: 0.5rem 0;
+}
+
+.usuarios button {
+  margin-left: 10px;
+  background-color: #8B0000;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 0.3rem 0.6rem;
+  cursor: pointer;
+}
+
+.usuarios button:hover {
+  background-color: #a52a2a;
+}
+
+/* Estadísticas */
+.estadisticas table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.estadisticas th, .estadisticas td {
+  border: 1px solid #ccc;
+  padding: 0.5rem;
+  text-align: center;
+}
+
+/* Reportes */
+.reportes button {
+  background-color: #8B0000;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+.reportes button:hover {
+  background-color: #a52a2a;
+}

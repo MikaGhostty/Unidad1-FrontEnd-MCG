@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Dashboard Usuario - SportClub</title>
+  <link rel="stylesheet" href="BodyDashUser.css">
+</head>
+<body>
+  <header class="header-user">
+    <img src="SportClubLogo.png" alt="Logo SportClub" class="logo">
+    <nav class="nav-user">
+      <a href="#">Inicio</a>
+      <a href="#">Clases</a>
+      <a href="#">Reservas</a>
+      <a href="#">Mi Progreso</a>
+      <button class="btn-edit">Editar Perfil</button>
+      <a href="login1.html" class="btn-logout">Cerrar Sesión</a>
+    </nav>
+  </header>
+
+  <main class="main-user">
+  <h1>Bienvenido Josepito a tu progreso</h1>
+
+  <div class="dashboard-grid">
+    <!-- Perfil -->
+    <section class="card perfil">
+      <h2>Mi Perfil</h2>
+      <img src="perfil.png" alt="Foto perfil">
+      <p><strong>Nombre:</strong> Josepi torrio</p>
+      <p><strong>Email:</strong> Josepitoelmascapito@sportclub.com</p>
+      <p><strong>Objetivos Personales:</strong> Calistenia - Box - Taekwondo</p>
+    </section>
+
+    <!-- Progreso -->
+    <section class="card progreso">
+      <h2>Mi Progreso</h2>
+      <p>Avance: 24% del programa</p>
+      <div class="barra-progreso">
+        <div class="relleno"></div>
+      </div>
+      <div class="ejercicios">
+        <h3>Ejercicios realizados</h3>
+        <ul>
+          <li>Curl de biceps con barra – 12 reps – 50kg</li>
+          <li>Curl alterno con mancuernas – 12 reps – 30kg cada brazo</li>
+          <li>Curl concentrado – 10 reps – 15kg</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Clases -->
+    <section class="card clases">
+      <h2>Clases Disponibles</h2>
+      <ul>
+        <li>Box – Viernes 09:00 <button>Reservar</button></li>
+        <li>Taekwondo – Martes 10:00 <button>Reservar</button></li>
+        <li>Zumba – Jueves 18:00 <button>Reservar</button></li>
+      </ul>
+    </section>
+  </div>
+
+  <!-- Calendario -->
+  <section class="calendario">
+    <h2>Calendario de Clases</h2>
+    <table>
+      <tr>
+        <th>Lunes</th><th>Martes</th><th>Miércoles</th><th>Jueves</th><th>Viernes</th>
+      </tr>
+      <tr>
+        <td>Spinning 18:00</td>
+        <td>Taekwondo 10:00</td>
+        <td>CrossFit 10:00</td>
+        <td>Zumba 18:00</td>
+        <td>Box 09:00</td>
+      </tr>
+    </table>
+  </section>
+</main>
