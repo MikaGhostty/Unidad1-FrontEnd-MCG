@@ -4,23 +4,32 @@ body {
   background-color: #f9f9f9;
 }
 
-/* Header */
 .header-landing {
-  background-color: #2E1A47; /* morado oscuro */
+  background-color: #2E1A47;
   color: #fff;
   padding: 1rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .logo {
   height: 50px;
+  flex: 1 1 auto;
+}
+
+.nav-landing {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end;
+  flex: 2 1 auto;
 }
 
 .nav-landing a {
   color: #fff;
-  margin: 0 10px;
+  margin: 5px 10px;
   text-decoration: none;
 }
 
@@ -29,20 +38,19 @@ body {
 }
 
 .btn-login, .btn-register {
-  background-color: #F2B705; /* dorado */
+  background-color: #F2B705;
   color: #2E1A47;
   padding: 0.5rem 1rem;
   border-radius: 4px;
   text-decoration: none;
-  margin-left: 10px;
+  margin: 5px;
 }
 
 .btn-register {
-  background-color: #28a745; /* verde */
+  background-color: #28a745;
   color: #fff;
 }
 
-/* Hero */
 .hero {
   text-align: center;
   padding: 4rem 2rem;
@@ -68,7 +76,6 @@ body {
   font-weight: bold;
 }
 
-/* Beneficios */
 .beneficios {
   padding: 2rem;
   text-align: center;
@@ -89,37 +96,36 @@ body {
   width: 250px;
 }
 
-/* Clases */
-.clases {
-  padding: 2rem;
+.calendario {
+  background: #fff;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  margin: 2rem;
 }
 
-.clases ul {
-  list-style: none;
-  padding: 0;
+.calendario h2 {
+  color: #2E86C1;
+  margin-bottom: 1rem;
+  text-align: center;
 }
 
-.clases li {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: 0.5rem 0;
+.table-container {
+  overflow-x: auto;
 }
 
-.clases button {
-  background-color: #28a745;
-  color: #fff;
-  border: none;
-  border-radius: 4px;
-  padding: 0.3rem 0.6rem;
-  cursor: pointer;
+.calendario table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 400px;
 }
 
-.clases button:hover {
-  background-color: #218838;
+.calendario th, .calendario td {
+  border: 1px solid #ccc;
+  padding: 0.5rem;
+  text-align: center;
 }
 
-/* Testimonios */
 .testimonios {
   background-color: #f0f9f0;
   padding: 2rem;
@@ -132,7 +138,6 @@ body {
   max-width: 600px;
 }
 
-/* Footer */
 .footer {
   background-color: #2E1A47;
   color: #fff;
@@ -140,7 +145,6 @@ body {
   padding: 1rem;
 }
 
-/* Responsividad */
 @media (max-width: 768px) {
   .cards-beneficios {
     flex-direction: column;
@@ -153,5 +157,9 @@ body {
 
   .hero p {
     font-size: 1rem;
+  }
+
+  .calendario table {
+    font-size: 0.9rem;
   }
 }
