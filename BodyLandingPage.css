@@ -1,0 +1,157 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+}
+
+/* Header */
+.header-landing {
+  background-color: #2E1A47; /* morado oscuro */
+  color: #fff;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  height: 50px;
+}
+
+.nav-landing a {
+  color: #fff;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+.nav-landing a:hover {
+  text-decoration: underline;
+}
+
+.btn-login, .btn-register {
+  background-color: #F2B705; /* dorado */
+  color: #2E1A47;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  text-decoration: none;
+  margin-left: 10px;
+}
+
+.btn-register {
+  background-color: #28a745; /* verde */
+  color: #fff;
+}
+
+/* Hero */
+.hero {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: linear-gradient(to right, #2E86C1, #28a745);
+  color: #fff;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin: 1rem 0;
+}
+
+.btn-cta {
+  background-color: #F2B705;
+  color: #2E1A47;
+  padding: 0.8rem 1.5rem;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Beneficios */
+.beneficios {
+  padding: 2rem;
+  text-align: center;
+}
+
+.cards-beneficios {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.cards-beneficios .card {
+  background: #fff;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  width: 250px;
+}
+
+/* Clases */
+.clases {
+  padding: 2rem;
+}
+
+.clases ul {
+  list-style: none;
+  padding: 0;
+}
+
+.clases li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0.5rem 0;
+}
+
+.clases button {
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 0.3rem 0.6rem;
+  cursor: pointer;
+}
+
+.clases button:hover {
+  background-color: #218838;
+}
+
+/* Testimonios */
+.testimonios {
+  background-color: #f0f9f0;
+  padding: 2rem;
+  text-align: center;
+}
+
+.testimonios blockquote {
+  font-style: italic;
+  margin: 1rem auto;
+  max-width: 600px;
+}
+
+/* Footer */
+.footer {
+  background-color: #2E1A47;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+  .cards-beneficios {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+}
