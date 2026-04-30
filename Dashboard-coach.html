@@ -19,9 +19,14 @@
   </header>
 
   <main class="main-coach">
-    <h1>Panel de Entrenador</h1>
-    <p><strong>Bienvenido,</strong> Larry Capiha</p>
-
+    <h1 id="Bienvenido"></h1>
+    <script>
+      const user = JSON.parse(localStorage.getItem("user"));
+      if (user) {
+        document.getElementById("Bienvenido").textContent = `Bienvenido, ${user.name}`;
+      }
+  </script>
+  
     <div class="dashboard-grid">
       <!-- Mis alumnos -->
       <section class="card alumnos">

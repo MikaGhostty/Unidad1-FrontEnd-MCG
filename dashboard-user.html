@@ -19,7 +19,13 @@
   </header>
 
   <main class="main-user">
-  <h1>Bienvenido Josepito a tu progreso</h1>
+    <h1 id="Bienvenido"></h1>
+    <script>
+      const user = JSON.parse(localStorage.getItem("user"));
+      if (user) {
+        document.getElementById("Bienvenido").textContent = `Bienvenido, ${user.name}`;
+      }
+  </script>
 
   <div class="dashboard-grid">
     <!-- Perfil -->

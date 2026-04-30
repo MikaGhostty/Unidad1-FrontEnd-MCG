@@ -19,8 +19,13 @@
   </header>
 
   <main class="main-admin">
-    <h1>Panel de Administración</h1>
-      <p><strong>Bienvenido, </strong>  administrador</p>
+    <h1 id="Bienvenido"></h1>
+    <script>
+      const user = JSON.parse(localStorage.getItem("user"));
+      if (user) {
+        document.getElementById("Bienvenido").textContent = `Bienvenido, ${user.name}`;
+      }
+  </script>
 
     <div class="dashboard-grid">
       <!-- Gestión de Usuarios -->
