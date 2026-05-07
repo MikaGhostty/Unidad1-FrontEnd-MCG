@@ -14,7 +14,7 @@
       <a href="#">Reservas</a>
       <a href="#">Mi Progreso</a>
       <button class="btn-edit">Editar Perfil</button>
-      <a href="login1.html" class="btn-logout">Cerrar Sesión</a>
+      <a href="login.html" class="btn-logout">Cerrar Sesión</a>
     </nav>
   </header>
 
@@ -25,60 +25,62 @@
       if (user) {
         document.getElementById("Bienvenido").textContent = `Bienvenido, ${user.name}`;
       }
-  </script>
+    </script>
 
-  <div class="dashboard-grid">
-    <!-- Perfil -->
-    <section class="card perfil">
-      <h2>Mi Perfil</h2>
-      <img src="perfil.png" alt="Foto perfil">
-      <p><strong>Nombre:</strong> Josepi torrio</p>
-      <p><strong>Email:</strong> Josepitoelmascapito@sportclub.com</p>
-      <p><strong>Objetivos Personales:</strong> Calistenia - Box - Taekwondo</p>
-    </section>
+    <div class="dashboard-grid">
+      <!-- Perfil -->
+      <section class="card perfil">
+        <h2>Mi Perfil</h2>
+        <img src="perfil.png" alt="Foto perfil">
+        <p><strong>Nombre:</strong> <span id="perfilNombre">Josepi torrio</span></p>
+        <p><strong>Email:</strong> <span id="perfilEmail">Josepitoelmascapito@sportclub.com</span></p>
+        <p><strong>Objetivos Personales:</strong> Calistenia - Box - Taekwondo</p>
+      </section>
 
-    <!-- Progreso -->
-    <section class="card progreso">
-      <h2>Mi Progreso</h2>
-      <p>Avance: 24% del programa</p>
-      <div class="barra-progreso">
-        <div class="relleno"></div>
-      </div>
-      <div class="ejercicios">
-        <h3>Ejercicios realizados</h3>
+      <!-- Progreso -->
+      <section class="card progreso">
+        <h2>Mi Progreso</h2>
+        <p>Avance: 24% del programa</p>
+        <div class="barra-progreso">
+          <div class="relleno"></div>
+        </div>
+        <div class="ejercicios">
+          <h3>Ejercicios realizados</h3>
+          <ul>
+            <li>Curl de bíceps con barra – 12 reps – 50kg</li>
+            <li>Curl alterno con mancuernas – 12 reps – 30kg cada brazo</li>
+            <li>Curl concentrado – 10 reps – 15kg</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Clases -->
+      <section class="card clases">
+        <h2>Clases Disponibles</h2>
         <ul>
-          <li>Curl de biceps con barra – 12 reps – 50kg</li>
-          <li>Curl alterno con mancuernas – 12 reps – 30kg cada brazo</li>
-          <li>Curl concentrado – 10 reps – 15kg</li>
+          <li>Box – Viernes 09:00 <button>Reservar</button></li>
+          <li>Taekwondo – Martes 10:00 <button>Reservar</button></li>
+          <li>Zumba – Jueves 18:00 <button>Reservar</button></li>
         </ul>
-      </div>
-    </section>
+      </section>
+    </div>
 
-    <!-- Clases -->
-    <section class="card clases">
-      <h2>Clases Disponibles</h2>
-      <ul>
-        <li>Box – Viernes 09:00 <button>Reservar</button></li>
-        <li>Taekwondo – Martes 10:00 <button>Reservar</button></li>
-        <li>Zumba – Jueves 18:00 <button>Reservar</button></li>
-      </ul>
+    <!-- Calendario -->
+    <section class="calendario">
+      <h2>Calendario de Clases</h2>
+      <table>
+        <tr>
+          <th>Lunes</th><th>Martes</th><th>Miércoles</th><th>Jueves</th><th>Viernes</th>
+        </tr>
+        <tr>
+          <td>Spinning 18:00</td>
+          <td>Taekwondo 10:00</td>
+          <td>CrossFit 10:00</td>
+          <td>Zumba 18:00</td>
+          <td>Box 09:00</td>
+        </tr>
+      </table>
     </section>
-  </div>
-
-  <!-- Calendario -->
-  <section class="calendario">
-    <h2>Calendario de Clases</h2>
-    <table>
-      <tr>
-        <th>Lunes</th><th>Martes</th><th>Miércoles</th><th>Jueves</th><th>Viernes</th>
-      </tr>
-      <tr>
-        <td>Spinning 18:00</td>
-        <td>Taekwondo 10:00</td>
-        <td>CrossFit 10:00</td>
-        <td>Zumba 18:00</td>
-        <td>Box 09:00</td>
-      </tr>
-    </table>
-  </section>
-</main>
+  </main>
+</body>
+</html>
