@@ -1,8 +1,4 @@
-const users = [
-  { user: "user@sportclub.cl", password: "1234", role: "user", name: "Usuario Uno" },
-  { user: "coach@sportclub.cl", password: "1234", role: "coach", name: "Coach Uno" },
-  { user: "admin@sportclub.cl", password: "1234", role: "admin", name: "Admin Uno" },
-];
+
 
 document.getElementById("loginForm").addEventListener("submit", function(e) {
   e.preventDefault();
@@ -11,7 +7,14 @@ document.getElementById("loginForm").addEventListener("submit", function(e) {
   const password = document.getElementById("password").value.trim();
   const errorMsg = document.getElementById("errorMsg");
 
-  const user = users.find(u => u.user === email && u.password === password);
+    const response= await fetch('http://localhost:3000/api/auth/login', { 
+      method: 'POST',
+      headers: {'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        email: 'user1@demo.cl',
+        password: '12345678'
+      })
+    });
 
   if (user) {
     localStorage.setItem("user", JSON.stringify(user));
