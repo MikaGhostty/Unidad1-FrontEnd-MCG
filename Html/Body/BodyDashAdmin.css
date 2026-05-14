@@ -1,0 +1,184 @@
+/* General */
+body {
+  background-color: #f9f0f0;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  display: flex;
+  color: #333;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 220px;
+  background-color: #2E1A47;
+  color: #fff;
+  height: 100vh;
+  padding: 1rem;
+  position: fixed;
+}
+
+.sidebar .user-info {
+  margin-bottom: 2rem;
+}
+
+.sidebar h3 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.sidebar .badge.admin {
+  background-color: #520a0a;
+  padding: 0.3rem 0.6rem;
+  border-radius: 4px;
+  font-size: 0.8rem;
+}
+
+.sidebar nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar nav li {
+  margin: 0.8rem 0;
+}
+
+.sidebar nav a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.sidebar nav li.active a {
+  color: #F2B705;
+  font-weight: bold;
+}
+
+/* Main content */
+.main-content {
+  margin-left: 240px;
+  padding: 2rem;
+  flex: 1;
+}
+
+h1 {
+  text-align: center;
+  color: #7a0909;
+  margin-bottom: 2rem;
+}
+
+/* Cards */
+.card {
+  background: #fff;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  margin-bottom: 2rem;
+}
+
+.card h2 {
+  color: #8B0000;
+  margin-bottom: 1rem;
+}
+
+/* Tabla de usuarios */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 0.75rem;
+  text-align: center;
+  border-bottom: 1px solid #ccc;
+}
+
+thead {
+  background-color: #520a0a;
+  color: #fff;
+}
+
+tbody tr:hover {
+  background-color: #f2dede;
+}
+
+/* Badges de roles */
+.badge.admin {
+  background-color: #520a0a;
+  color: #fff;
+}
+
+.badge.coach {
+  background-color: #2E1A47;
+  color: #fff;
+}
+
+.badge.user {
+  background-color: #2e8b57;
+  color: #fff;
+}
+
+/* Botones */
+.btn-warning {
+  background-color: #F2B705;
+  color: #000;
+  border: none;
+  padding: 0.4rem 0.8rem;
+  border-radius: 4px;
+}
+
+.btn-danger {
+  background-color: #8B0000;
+  color: #fff;
+  border: none;
+  padding: 0.4rem 0.8rem;
+  border-radius: 4px;
+}
+
+.btn-danger:hover {
+  background-color: #a52a2a;
+}
+
+.btn-success {
+  background-color: #2e8b57;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+}
+
+.btn-secondary {
+  background-color: #ccc;
+  color: #000;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+}
+
+/* Formulario */
+form label {
+  font-weight: 500;
+  display: block;
+  margin-bottom: 0.3rem;
+}
+
+form input, form select {
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+form input:invalid {
+  border-color: #8B0000;
+}
+
+.invalid-feedback {
+  font-size: 0.85rem;
+  color: #8B0000;
+}
+
+/* Caja de información */
+.info-box {
+  background-color: #fff8f8;
+  border-left: 4px solid #520a0a;
+}

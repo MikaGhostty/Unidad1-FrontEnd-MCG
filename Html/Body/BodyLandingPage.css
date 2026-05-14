@@ -1,0 +1,165 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+}
+
+.header-landing {
+  background-color: #2E1A47;
+  color: #fff;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.logo {
+  height: 50px;
+  flex: 1 1 auto;
+}
+
+.nav-landing {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end;
+  flex: 2 1 auto;
+}
+
+.nav-landing a {
+  color: #fff;
+  margin: 5px 10px;
+  text-decoration: none;
+}
+
+.nav-landing a:hover {
+  text-decoration: underline;
+}
+
+.btn-login, .btn-register {
+  background-color: #F2B705;
+  color: #2E1A47;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  text-decoration: none;
+  margin: 5px;
+}
+
+.btn-register {
+  background-color: #28a745;
+  color: #fff;
+}
+
+.hero {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: linear-gradient(to right, #2E86C1, #28a745);
+  color: #fff;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin: 1rem 0;
+}
+
+.btn-cta {
+  background-color: #F2B705;
+  color: #2E1A47;
+  padding: 0.8rem 1.5rem;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.beneficios {
+  padding: 2rem;
+  text-align: center;
+}
+
+.cards-beneficios {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.cards-beneficios .card {
+  background: #fff;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  width: 250px;
+}
+
+.calendario {
+  background: #fff;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  margin: 2rem;
+}
+
+.calendario h2 {
+  color: #2E86C1;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.table-container {
+  overflow-x: auto;
+}
+
+.calendario table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 400px;
+}
+
+.calendario th, .calendario td {
+  border: 1px solid #ccc;
+  padding: 0.5rem;
+  text-align: center;
+}
+
+.testimonios {
+  background-color: #f0f9f0;
+  padding: 2rem;
+  text-align: center;
+}
+
+.testimonios blockquote {
+  font-style: italic;
+  margin: 1rem auto;
+  max-width: 600px;
+}
+
+.footer {
+  background-color: #2E1A47;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+}
+
+@media (max-width: 768px) {
+  .cards-beneficios {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .calendario table {
+    font-size: 0.9rem;
+  }
+}
