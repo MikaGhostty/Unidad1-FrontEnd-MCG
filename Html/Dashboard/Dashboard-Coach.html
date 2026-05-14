@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Dashboard Coach - SportClub</title>
+  <link rel="stylesheet" href="/Body/BodyDashCoach.css">
+</head>
+<body>
+  <header class="header-coach">
+    <img src="/Photos/SportClubLogo.png" alt="Logo SportClub" class="logo">
+    <nav class="nav-coach">
+      <a href="#">Inicio</a>
+      <a href="#">Mis Alumnos</a>
+      <a href="#">Mi Horario</a>
+      <a href="#">Reportes</a>
+      <a href="#" class="active">Perfil</a>
+      <a href="/login1.html" class="btn-logout">Cerrar Sesión</a>
+    </nav>
+  </header>
+
+  <main class="main-coach">
+    <h1 id="Bienvenido"></h1>
+    <p class="descripcion">Gestiona tu información personal y tus clases</p>
+
+    <!-- Perfil del Coach -->
+    <section class="card perfil">
+      <h2>Mi Perfil</h2>
+      <img src="/Photos/perfil.png" alt="Foto perfil" class="foto-perfil">
+      <p><strong>Nombre:</strong> <span id="perfilNombre"></span></p>
+      <p><strong>Email:</strong> <span id="perfilEmail"></span></p>
+      <p><strong>Rol:</strong> <span id="perfilRol"></span></p>
+      <p><strong>Fecha de nacimiento:</strong> <span id="perfilFecha"></span></p>
+      <button id="btnEditar" class="btn-edit">Editar Perfil</button>
+    </section>
+
+    <!-- Mis alumnos -->
+    <section class="card alumnos">
+      <h2>Mis Alumnos</h2>
+      <ul id="listaAlumnos">
+        <li>Alumno 1 <button>Ver Progreso</button></li>
+        <li>Alumno 2 <button>Ver Progreso</button></li>
+        <li>Alumno 3 <button>Ver Progreso</button></li>
+      </ul>
+    </section>
+
+    <!-- Mi Horario -->
+    <section class="card horario">
+      <h2>Mi Horario</h2>
+      <table>
+        <tr>
+          <th>Lunes</th><th>Martes</th><th>Miércoles</th><th>Jueves</th><th>Viernes</th>
+        </tr>
+        <tr>
+          <td>Spinning 18:00</td>
+          <td>CrossFit 11:00</td>
+          <td>Boxeo 17:00</td>
+          <td>Funcional 19:00</td>
+          <td>HIIT 10:00</td>
+        </tr>
+      </table>
+    </section>
+
+    <!-- Reportes -->
+    <section class="card reportes">
+      <h2>Reportes</h2>
+      <p>Total alumnos: <span id="totalAlumnos">0</span></p>
+      <p>Clases asignadas: <span id="clasesAsignadas">0</span></p>
+      <button>Ver Detalle</button>
+    </section>
+
+    <!-- Cambio de contraseña -->
+    <section class="card seguridad">
+      <h2>Cambiar Contraseña</h2>
+      <form id="passwordForm">
+        <label for="actualPass">Contraseña actual</label>
+        <input type="password" id="actualPass" required>
+
+        <label for="newPass">Nueva contraseña</label>
+        <input type="password" id="newPass" minlength="8" required>
+        <div class="invalid-feedback">Debe tener al menos 8 caracteres</div>
+
+        <label for="confirmPass">Confirmar nueva contraseña</label>
+        <input type="password" id="confirmPass" required>
+        <div class="invalid-feedback">Las contraseñas deben coincidir</div>
+
+        <button type="submit" class="btn-save">Actualizar contraseña</button>
+      </form>
+    </section>
+  </main>
+
+  <script src="coach.js"></script>
+</body>
+</html>

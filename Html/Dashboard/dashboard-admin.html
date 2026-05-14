@@ -2,109 +2,79 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Sistema Deportivo - Admin</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
-  <link rel="stylesheet" href="/Html/Body/BodyDashAdmin.css">
+  <title>Dashboard Admin - SportClub</title>
+  <link rel="stylesheet" href="BodyDashAdmin.css">
 </head>
 <body>
-  <aside class="sidebar">
-    <div class="user-info">
-      <h3>Admin Demo</h3>
-      <span class="badge admin">Administrador</span>
-    </div>
-    <nav>
-      <ul>
-        <li><a href="#">Dashboard</a></li>
-        <li class="active"><a href="#">Usuarios</a></li>
-        <li><a href="#">Deportes</a></li>
-        <li><a href="#">Equipos</a></li>
-        <li><a href="#">Entrenamientos</a></li>
-        <li><a href="#">Reportes</a></li>
-        <li><a href="#">Perfil</a></li>
-        <li><a href="#">Cerrar Sesión</a></li>
-      </ul>
+  <header class="header-admin">
+    <img src="SportClubLogo.png" alt="Logo SportClub" class="logo">
+    <nav class="nav-admin">
+      <a href="#">Inicio</a>
+      <a href="#">Usuarios</a>
+      <a href="#">Estadísticas</a>
+      <a href="#">Configuración</a>
+      <button class="btn-edit">Editar Perfil</button>
+      <a href="login1.html" class="btn-logout">Cerrar Sesión</a>
     </nav>
-  </aside>
+  </header>
 
-  <main class="main-content">
-    <h1>Gestión de Usuarios</h1>
+  <main class="main-admin">
+    <h1 id="Bienvenido"></h1>
+    <script>
+      const user = JSON.parse(localStorage.getItem("user"));
+      if (user) {
+        document.getElementById("Bienvenido").textContent = `Bienvenido, ${user.name}`;
+      }
+  </script>
 
-    <section class="card">
-      <h2>Lista de Usuarios</h2>
-      <table>
-        <thead>
+    <div class="dashboard-grid">
+      <!-- Gestión de Usuarios -->
+      <section class="card usuarios">
+        <h2>Gestión de Usuarios</h2>
+        <input type="text" placeholder="Buscar...">
+        <ul>
+          <li>Nombre: Elton tito – Email: EltonTito@sportclub.com – Rol: Usuario <button>Editar</button></li>
+          <li>Nombre: Josepi torrio – Email: Josepitoelmascapito@sportclub.com – Rol: Usuario <button>Editar</button></li>
+          <li>Nombre: Leonor Gasmo – Email: LeonorGasmo@sportclub.com – Rol: Usuario <button>Editar</button></li>
+        </ul>
+      </section>
+
+      <!-- Estadísticas -->
+      <section class="card estadisticas">
+        <h2>Estadísticas del Sistema</h2>
+        <table>
           <tr>
-            <th>ID</th>
-            <th>Nombre Completo</th>
+            <th>Nombre </th>
             <th>Email</th>
             <th>Rol</th>
-            <th>Fecha Registro</th>
-            <th>Acciones</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>1</td>
-            <td>Admin Demo</td>
-            <td>admin@demo.cl</td>
-            <td><span class="badge admin">admin</span></td>
-            <td>12/05/2024</td>
-            <td>
-              <button class="btn-warning"><i class="bi bi-pencil"></i> Editar</button>
-              <button class="btn-danger"><i class="bi bi-trash"></i> Eliminar</button>
-            </td>
           </tr>
           <tr>
-            <td>2</td>
-            <td>Juan Pérez</td>
-            <td>juan.perez@demo.cl</td>
-            <td><span class="badge user">user</span></td>
-            <td>12/05/2024</td>
-            <td>
-              <button class="btn-warning"><i class="bi bi-pencil"></i> Editar</button>
-              <button class="btn-danger"><i class="bi bi-trash"></i> Eliminar</button>
-            </td>
+            <td>Elton tito</td>
+            <td>EltonTito@sportclub.com</td>
+            <td>Usuario</td>
           </tr>
-        </tbody>
-      </table>
-    </section>
+          <tr>
+            <td>Josepi torrio</td>
+            <td>Josepitoelmascapito@sportclub.com</td>
+            <td>Usuario</td>
+          </tr>
+          <tr>
+            <td>Leonor Gasmo</td>
+            <td>LeonorGasmo@sportclub.com</td>
+            <td>User</td>
+          </tr>
 
-    <section class="card">
-      <h2>Nuevo Usuario</h2>
-      <form>
-        <label for="nombre">Nombre Completo</label>
-        <input type="text" id="nombre" name="nombre" required>
-        <div class="invalid-feedback">El nombre es obligatorio</div>
+        </table>
+      </section>
 
-        <label for="email">Correo</label>
-        <input type="email" id="email" name="email" required>
-        <div class="invalid-feedback">El email es obligatorio</div>
-
-        <label for="rol">Rol</label>
-        <select id="rol" name="rol" required>
-          <option value="user">User</option>
-          <option value="coach">Coach</option>
-          <option value="admin">Admin</option>
-        </select>
-
-        <label for="password">Contraseña</label>
-        <input type="password" id="password" name="password" required minlength="8">
-        <div class="invalid-feedback">Contraseña mínima 8 caracteres</div>
-
-        <label for="confirmPassword">Confirmar Contraseña</label>
-        <input type="password" id="confirmPassword" name="confirmPassword" required>
-        <div class="invalid-feedback">Las contraseñas deben coincidir</div>
-
-        <button type="submit" class="btn-success">Guardar</button>
-        <button type="reset" class="btn-secondary">Cancelar</button>
-      </form>
-    </section>
-
-    <aside class="card info-box">
-      <h2>Información</h2>
-      <p>Solo los administradores pueden crear, editar y eliminar usuarios del sistema.</p>
-      <p>Los roles disponibles son <strong>user</strong> y <strong>admin</strong>.</p>
-    </aside>
+      <!-- Reportes -->
+      <section class="card reportes">
+        <h2>Reportes Generales</h2>
+        <p>Informe Mensual <button>Descargar</button></p>
+        <p>Abril <button>Descargar</button></p>
+        <button>Configurar...</button>
+      </section>
+    </div>
   </main>
 </body>
 </html>

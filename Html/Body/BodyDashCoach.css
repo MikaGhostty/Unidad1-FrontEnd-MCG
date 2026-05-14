@@ -1,10 +1,11 @@
+/* ===== Reset básico ===== */
 body {
   background-color: #f0f9f0;
   font-family: Arial, sans-serif;
   margin: 0;
 }
 
-/* Header */
+/* ===== Header ===== */
 .header-coach {
   background-color: #28a745; /* verde para coach */
   color: #fff;
@@ -28,6 +29,11 @@ body {
   text-decoration: underline;
 }
 
+.nav-coach a.active {
+  font-weight: bold;
+  border-bottom: 2px solid #F2B705; /* dorado */
+}
+
 .btn-edit, .btn-logout {
   margin-left: 10px;
   padding: 0.5rem 1rem;
@@ -48,7 +54,7 @@ body {
   border: none;
 }
 
-/* Main */
+/* ===== Main ===== */
 .main-coach {
   padding: 2rem;
 }
@@ -59,7 +65,13 @@ h1 {
   margin-bottom: 2rem;
 }
 
-/* Grid */
+.descripcion {
+  text-align: center;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+/* ===== Grid ===== */
 .dashboard-grid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr; /* tres columnas */
@@ -78,7 +90,7 @@ h1 {
   }
 }
 
-/* Cards */
+/* ===== Cards ===== */
 .card {
   background: #fff;
   padding: 1rem;
@@ -91,7 +103,13 @@ h1 {
   margin-bottom: 1rem;
 }
 
-/* Listas y tablas */
+.foto-perfil {
+  width: 100px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+
+/* ===== Listas y tablas ===== */
 .alumnos ul {
   list-style: none;
   padding: 0;
@@ -153,4 +171,70 @@ h1 {
 
 .reportes button:hover {
   background-color: #218838;
+}
+
+/* ===== Perfil y formularios ===== */
+form label {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+form input, form textarea {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+form input.invalid {
+  border-color: red;
+}
+
+.invalid-feedback {
+  color: red;
+  font-size: 12px;
+  display: none;
+}
+
+input:invalid + .invalid-feedback,
+textarea:invalid + .invalid-feedback {
+  display: block;
+}
+
+.success-msg {
+  color: #28a745;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+/* ===== Botones consistentes ===== */
+.btn {
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  border: none;
+}
+
+.btn-green { background-color: #28a745; color: #fff; }
+.btn-gold { background-color: #F2B705; color: #2E1A47; }
+.btn-purple { background-color: #2E1A47; color: #fff; }
+.btn-red { background-color: #e74c3c; color: #fff; }
+
+/* ===== Badges ===== */
+.badge {
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 0.9rem;
+}
+
+.bg-primary { background-color: #28a745; } /* coach */
+.bg-success { background-color: #2ecc71; } /* user */
+.bg-danger { background-color: #e74c3c; } /* admin */
+
+/* ===== Oculto ===== */
+.oculto {
+  display: none;
 }

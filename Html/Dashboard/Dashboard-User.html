@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Perfil de Usuario - SportClub</title>
+  <link rel="stylesheet" href="/Body/BodyDashUser.css">
+</head>
+<body>
+  <header class="header-user">
+    <img src="/Photos/SportClubLogo.png" alt="Logo SportClub" class="logo">
+    <nav class="nav-user">
+      <a href="#">Inicio</a>
+      <a href="#">Clases</a>
+      <a href="#">Reservas</a>
+      <a href="#" class="active">Perfil</a>
+      <a href="/login1.html" class="btn-logout">Cerrar Sesión</a>
+    </nav>
+  </header>
+
+  <main class="main-user">
+    <h1>Mi Perfil</h1>
+    <p class="descripcion">Gestiona tu información personal</p>
+
+    <!-- Card de Perfil -->
+    <section class="card perfil">
+      <img src="/Photos/perfil.png" alt="Foto perfil" class="foto-perfil">
+      <p><strong>Nombre:</strong> <span id="perfilNombre"></span></p>
+      <p><strong>Email:</strong> <span id="perfilEmail"></span></p>
+      <p><strong>Rol:</strong> <span id="perfilRol"></span></p>
+      <p><strong>Fecha de nacimiento:</strong> <span id="perfilFecha"></span></p>
+      <button id="btnEditar" class="btn-edit">Editar Perfil</button>
+    </section>
+
+    <!-- Formulario de edición -->
+    <section id="formEditar" class="card oculto">
+      <h2>Editar Perfil</h2>
+      <form id="editForm">
+        <label for="editNombre">Nombre completo</label>
+        <input type="text" id="editNombre" required>
+        <div class="invalid-feedback">El nombre es obligatorio</div>
+
+        <label for="editEmail">Email</label>
+        <input type="email" id="editEmail" required>
+        <div class="invalid-feedback">Email inválido</div>
+
+        <label for="editFecha">Fecha de nacimiento</label>
+        <input type="date" id="editFecha" required>
+        <div class="invalid-feedback">La fecha es obligatoria</div>
+
+        <label for="editMeta">Otros / Metadata</label>
+        <textarea id="editMeta"></textarea>
+
+        <button type="submit" class="btn-save">Guardar cambios</button>
+        <button type="button" id="btnCancelar" class="btn-cancel">Cancelar</button>
+      </form>
+    </section>
+
+    <!-- Cambio de contraseña -->
+    <section class="card seguridad">
+      <h2>Cambiar Contraseña</h2>
+      <form id="passwordForm">
+        <label for="actualPass">Contraseña actual</label>
+        <input type="password" id="actualPass" required>
+
+        <label for="newPass">Nueva contraseña</label>
+        <input type="password" id="newPass" minlength="8" required>
+        <div class="invalid-feedback">Debe tener al menos 8 caracteres</div>
+
+        <label for="confirmPass">Confirmar nueva contraseña</label>
+        <input type="password" id="confirmPass" required>
+        <div class="invalid-feedback">Las contraseñas deben coincidir</div>
+
+        <button type="submit" class="btn-save">Actualizar contraseña</button>
+      </form>
+    </section>
+  </main>
+
+  <script src="perfil.js"></script>
+</body>
+</html>

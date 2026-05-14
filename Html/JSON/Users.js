@@ -26,12 +26,13 @@ document.getElementById("loginForm").addEventListener("submit", async function(e
     localStorage.setItem("user", JSON.stringify(data.data.user));
 
     if (data.data.user.role === "user") {
-      window.location.href = "dashboard-user.html";
+      window.location.href = "/Dashboard/Dashboard-User.html";
     } else if (data.data.user.role === "coach") {
-      window.location.href = "dashboard-coach.html";
+      window.location.href = "/Dashboard/Dashboard-Coach.html";
     } else if (data.data.user.role === "admin") {
-      window.location.href = "dashboard-admin.html";
+      window.location.href = "/Dashboard/Dashboard-Admin.html";
     }
+
   } else {
     errorMsg.textContent = "Credenciales incorrectas. Intenta nuevamente.";
   }
