@@ -1,3 +1,6 @@
-# Unidad1-FrontEnd-MCG
-unidad 1 de html, css y js
+Codigo de Proyecto evaluado
+FrontEnd
 Inicio de sesion hecho por Matias Agustin Contreras Gomez
+
+
+Lenguajes utilizados: JS-HTML-CSS
