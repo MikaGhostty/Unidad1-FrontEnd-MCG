@@ -3,78 +3,83 @@
 <head>
   <meta charset="UTF-8">
   <title>Dashboard Admin - SportClub</title>
-  <link rel="stylesheet" href="BodyDashAdmin.css">
+  <link rel="stylesheet" href="/Html/Body/BodyDashAdmin.css">
 </head>
 <body>
   <header class="header-admin">
-    <img src="SportClubLogo.png" alt="Logo SportClub" class="logo">
+    <img src="/Html/Photos/SportClubLogo.png" alt="Logo SportClub" class="logo">
     <nav class="nav-admin">
-      <a href="#">Inicio</a>
-      <a href="#">Usuarios</a>
-      <a href="#">Estadísticas</a>
-      <a href="#">Configuración</a>
+      <a href="#" onclick="mostrarSeccion('inicio')">Inicio</a>
+      <a href="#" onclick="mostrarSeccion('usuarios')">Usuarios</a>
+      <a href="#" onclick="mostrarSeccion('estadisticas')">Estadísticas</a>
+      <a href="#" onclick="mostrarSeccion('configuracion')">Configuración</a>
       <button class="btn-edit">Editar Perfil</button>
-      <a href="login1.html" class="btn-logout">Cerrar Sesión</a>
+      <a href="/Html/login1.html" class="btn-logout">Cerrar Sesión</a>
     </nav>
   </header>
 
   <main class="main-admin">
     <h1 id="Bienvenido"></h1>
-    <script>
-      const user = JSON.parse(localStorage.getItem("user"));
-      if (user) {
-        document.getElementById("Bienvenido").textContent = `Bienvenido, ${user.name}`;
-      }
-  </script>
 
     <div class="dashboard-grid">
+      <!-- Inicio -->
+      <section id="inicio" class="card active">
+        <h2>Panel Principal</h2>
+        <p>Bienvenido al Dashboard de administración de SportClub.</p>
+      </section>
+
       <!-- Gestión de Usuarios -->
-      <section class="card usuarios">
+      <section id="usuarios" class="card usuarios">
         <h2>Gestión de Usuarios</h2>
+        <p>Administra los usuarios del sistema</p>
         <input type="text" placeholder="Buscar...">
-        <ul>
-          <li>Nombre: Elton tito – Email: EltonTito@sportclub.com – Rol: Usuario <button>Editar</button></li>
-          <li>Nombre: Josepi torrio – Email: Josepitoelmascapito@sportclub.com – Rol: Usuario <button>Editar</button></li>
-          <li>Nombre: Leonor Gasmo – Email: LeonorGasmo@sportclub.com – Rol: Usuario <button>Editar</button></li>
-        </ul>
+        <button class="btn btn-success">Crear Usuario</button>
+
+        <!-- Tabla de usuarios -->
+        <table class="table">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Nombre</th>
+              <th>Email</th>
+              <th>Rol</th>
+              <th>Fecha de registro</th>
+              <th>Acciones</th>
+            </tr>
+          </thead>
+          <tbody id="usersTableBody"></tbody>
+        </table>
+
+
+        <form id="nuevoUsuarioForm">
+          <input type="text" id="nombre" placeholder="Nombre completo" required>
+          <input type="email" id="email" placeholder="Email" required>
+          <select id="rol" required>
+            <option value="user">Usuario</option>
+            <option value="coach">Coach</option>
+            <option value="admin">Admin</option>
+          </select>
+          <input type="password" id="password" placeholder="Contraseña" required>
+          <input type="password" id="confirmPassword" placeholder="Confirmar contraseña" required>
+          <button type="submit" class="btn btn-primary">Crear</button>
+        </form>
       </section>
 
       <!-- Estadísticas -->
-      <section class="card estadisticas">
+      <section id="estadisticas" class="card estadisticas">
         <h2>Estadísticas del Sistema</h2>
-        <table>
-          <tr>
-            <th>Nombre </th>
-            <th>Email</th>
-            <th>Rol</th>
-          </tr>
-          <tr>
-            <td>Elton tito</td>
-            <td>EltonTito@sportclub.com</td>
-            <td>Usuario</td>
-          </tr>
-          <tr>
-            <td>Josepi torrio</td>
-            <td>Josepitoelmascapito@sportclub.com</td>
-            <td>Usuario</td>
-          </tr>
-          <tr>
-            <td>Leonor Gasmo</td>
-            <td>LeonorGasmo@sportclub.com</td>
-            <td>User</td>
-          </tr>
-
-        </table>
+        <p>Aquí irán las métricas generales.</p>
       </section>
 
-      <!-- Reportes -->
-      <section class="card reportes">
-        <h2>Reportes Generales</h2>
-        <p>Informe Mensual <button>Descargar</button></p>
-        <p>Abril <button>Descargar</button></p>
-        <button>Configurar...</button>
+      <!-- Configuración -->
+      <section id="configuracion" class="card configuracion">
+        <h2>Configuración</h2>
+        <p>Opciones de ajustes generales del sistema.</p>
       </section>
     </div>
   </main>
+
+  <!-- JS externo -->
+  <script src="/Html/JSON/Admin.js"></script>
 </body>
 </html>
