@@ -1,27 +1,27 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom"
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 
 // Páginas públicas
-import Home from "../pages/Home"
-import Login from "../pages/Login"
-import Register from "../pages/Register"
-import Unauthorized from "../pages/Unauthorized"
+import Home from "../pages/Home";
+import Login from "../pages/Login";
+import Register from "../pages/Register";
+import Unauthorized from "../pages/Unauthorized";
 
 // Dashboards
-import UserDashboard from "../pages/user/UserDashboard"
-import CoachDashboard from "../pages/coach/CoachDashboard"
-import AdminDashboard from "../pages/admin/AdminDashboard"
+import UserDashboard from "../pages/user/UserDashboard";
+import CoachDashboard from "../pages/coach/CoachDashboard";
+import AdminDashboard from "../pages/admin/AdminDashboard";
 
 // Layouts
-import UserLayout from "../layouts/UserLayout"
-import CoachLayout from "../layouts/CoachLayout"
-import AdminLayout from "../layouts/AdminLayout"
+import UserLayout from "../layouts/UserLayout";
+import CoachLayout from "../layouts/CoachLayout";
+import AdminLayout from "../layouts/AdminLayout";
 
 // Rutas protegidas
-import ProtectedRoute from "../routes/ProtectedRoute"
-import RoleRoute from "../routes/RoleRoute"
+import ProtectedRoute from "../routes/ProtectedRoute";
+import RoleRoute from "../routes/RoleRoute";
 
 // Página de gestión de usuarios para admin
-import UsersPage from "../pages/admin/UserPage"
+import UserPage from "../pages/admin/UserPage"; // nombre correcto
 
 function AppRoutes() {
   return (
@@ -64,8 +64,14 @@ function AppRoutes() {
             </RoleRoute>
           }
         >
-          <Route path="dashboard" element={<AdminDashboard />} />
-          <Route path="users" element={<UsersPage />} />
+          {/* Redirección por defecto */}
+          <Route index element={<Navigate to="dashboard" replace />} />
+
+          {/* Dashboard con sub‑rutas */}
+          <Route path="dashboard/*" element={<AdminDashboard />} />
+
+          {/* Gestión de usuarios */}
+          <Route path="users" element={<UserPage />} />
         </Route>
 
         {/* Ruta protegida genérica */}
@@ -79,7 +85,7 @@ function AppRoutes() {
         />
       </Routes>
     </BrowserRouter>
-  )
+  );
 }
 
-export default AppRoutes
+export default AppRoutes;

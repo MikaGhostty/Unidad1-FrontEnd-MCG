@@ -12,31 +12,35 @@ function AdminLayout() {
   }
 
   return (
-    <>
-      <Navbar bg="dark" variant="dark" expand="lg">
-        <Container>
-          <Navbar.Brand>SportClub Admin</Navbar.Brand>
-          <Nav className="me-auto">
-            <Link className="nav-link" to="/admin/dashboard">
-              Dashboard
-            </Link>
-            <Link className="nav-link" to="/admin/users">
-              Usuarios
-            </Link>
-          </Nav>
-          <span className="text-white me-3">
-            {user?.name}
-          </span>
-          <Button variant="outline-light" onClick={handleLogout}>
-            Cerrar sesión
-          </Button>
-        </Container>
-      </Navbar>
+    <div className="dashboard-layout">
+      {/* Sidebar */}
+      <aside className="sidebar">
+        <h2 className="sidebar-logo">SportClub Admin</h2>
+        <nav>
+          <a href="/admin/dashboard" className="nav-link">Dashboard</a>
+          <a href="/admin/users" className="nav-link">Usuarios</a>
+          <a href="/admin/calendar" className="nav-link">Calendario</a>
+          <a href="/admin/reports" className="nav-link">Reportes</a>
+          <a href="/admin/settings" className="nav-link">Configuración</a>
+        </nav>
+      </aside>
 
-      <Container className="mt-4">
+      {/* Main content */}
+      <main className="main-content">
+        {/* Topbar */}
+        <header className="topbar">
+          <div className="profile">
+            <span>{user?.name || "Mi perfil"}</span>
+          </div>
+          <button className="btn btn-danger" onClick={handleLogout}>
+            Cerrar sesión
+          </button>
+        </header>
+
+        {/* Aquí se renderizan las páginas hijas */}
         <Outlet />
-      </Container>
-    </>
+      </main>
+    </div>
   )
 }
 
